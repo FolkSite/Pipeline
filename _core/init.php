@@ -6,6 +6,7 @@
 	require 'settings-local.php';
 	require 'database/db_connect.php';
 	require 'functions/general.php';
+	require 'functions/threads.php';
 
 	$current_page=explode('/',$_SERVER['SCRIPT_NAME']);
 	$current_page=end($current_page);
