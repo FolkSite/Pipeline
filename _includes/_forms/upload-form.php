@@ -30,7 +30,7 @@
 						<input type="file" name="image" id="upl" />
 					</div>
 					<div class="large-12 columns">
-				      <input type="submit" value="Submit" class="button expand">
+				      <input type="submit" value="Submit" class="button expand" style="visiblity:hidden" id="submitbutton">
 				    </div>	
 				</div> 
 			</fieldset>

@@ -17,6 +17,7 @@
 	border: 10px solid rgb(14, 56, 119);  
 	margin: 20px auto;
 	text-align: center;
+	cursor: pointer;
 }
 
 #drop-box:before {
@@ -34,4 +35,8 @@
 #drop-box p{
 	color: #fff;
 	line-height: 200px;
+}
+
+#upl{
+	visibility: hidden;
 }
