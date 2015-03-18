@@ -1,5 +1,23 @@
 <?php
 	
+
+
+
+function thread_list($email){
+	$query = "SELECT SL_NO FROM `".ENTRY_TABLE."` WHERE email = '$email' ORDER BY LAST_MODIFIED_TIME DESC";
+	$data = mysql_query($query);
+	if(mysql_num_rows($data)){
+		while($thread_data = mysql_fetch_assoc($data)){
+			$thread_ids[] = $thread_data['SL_NO'];
+		}
+
+	}else{
+		$thread_ids = 0;
+	}
+	return $thread_ids;
+}
+
+
 function update_thread_data($update_data,$sl_no){
 	$sl_no= (int)$sl_no;
 	$update = array();

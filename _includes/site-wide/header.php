@@ -23,8 +23,8 @@
 		<div id="container">
 			<div id="header">
 				<div class="row">
-					<div class="small-12 large-2 columns"><div class="logo"></div></div>
-					<div class="small-12 large-10 columns"></div>
+					<div class="small-12 large-2 columns"><a href="index.php"><div class="logo"><img src="images/logo.png"></div></a></div>
+					<div class="small-12 large-10 columns"><a href="snr-status.php" class="button tiny">SRN Status</a></div>
 				</div>
 			</div><!-- End of id="header" -->
 			<div id="content-container">
