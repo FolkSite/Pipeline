@@ -33,12 +33,38 @@ define('ENTRY_TABLE', 'uploads table'); // Main table
 
 Uploads Table
 
-<pre>
-CREATE TABLE IF NOT EXISTS `upload_entry` (
+<pre>CREATE TABLE IF NOT EXISTS `requests` (
+  `SL_NO` int(4) NOT NULL AUTO_INCREMENT,
+  `SRN` varchar(32) NOT NULL,
+  `FILE_NAME` varchar(400) NOT NULL,
+  `REVISION` int(11) NOT NULL DEFAULT '0',
+  `CREATE_TIME` datetime NOT NULL,
+  `MOD_TIME` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00' ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`SL_NO`)
+) 
+</pre>
+
+Signs table
+
+<pre>CREATE TABLE IF NOT EXISTS `signs` (
+  `ID` int(5) NOT NULL AUTO_INCREMENT,
+  `NAME` varchar(300) NOT NULL,
+  `CERT_ADD` varchar(300) NOT NULL,
+  `TYPE` varchar(20) NOT NULL,
+  `TIME` datetime NOT NULL,
+  PRIMARY KEY (`ID`)
+)</pre>
+
+
+Upload Entry Table
+
+<pre>CREATE TABLE IF NOT EXISTS `upload_entry` (
   `SL_NO` int(10) unsigned zerofill NOT NULL AUTO_INCREMENT,
   `EMAIL` varchar(300) NOT NULL,
   `FILE_LOCATION` varchar(300) NOT NULL,
   `UPLOAD_TIME` datetime NOT NULL,
   `LAST_MODIFIED_TIME` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `STATUS` int(1) NOT NULL DEFAULT '0',
+  `SRN` int(8) NOT NULL,
   PRIMARY KEY (`SL_NO`)
-)</pre>
+) </pre>
