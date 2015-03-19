@@ -46,7 +46,7 @@
 								$thread_data = thread_data($key);
 								$request_data = request_data($thread_data['SRN'],'SRN');
 						?>
-							<tr <?php if($thread_data['STATUS'] == 2) echo "class=\"build-success\"";?>>
+							<tr <?php if($thread_data['STATUS'] == 2) echo "class=\"build-success\""; elseif($thread_data['STATUS'] == 1) echo "class=\"build-inprocess\"";  ?>>
 								<th><?php echo $i; $i++; ?></th>
 								<th><?php echo $thread_data['SL_NO']; ?></th>
 								<th><?php echo $thread_data['SRN']; ?></th>	

@@ -49,3 +49,13 @@ table tr.build-success{
 table tr.build-success *{
 	color: #fff !important;
 }
+
+table tr.build-inprocess{
+	background-color: rgb(240, 138, 36);
+	color: #fff !important;
+}
+
+table tr.build-inprocess *{
+	color: #fff !important;
+}
+
