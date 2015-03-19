@@ -18,15 +18,15 @@ Create a file with name settings-local.php inside _core direcotory
 <?php
 
 // ** MySQL settings - You can get this info from your web host ** //
-define('DB_NAME', 'Database name'); // The name of the database to use
-define('DB_USER', 'root'); // MySQL database username
-define('DB_PASSWORD', 'password'); // MySQL database password
-define('DB_HOST', 'localhost'); // MySQL hostname
-define('DB_CHARSET', 'utf8'); // Database Charset to use in creating database tables.
+_define('DB_NAME', 'Database name'); // The name of the database to use
+_define('DB_USER', 'root'); // MySQL database username
+_define('DB_PASSWORD', 'password'); // MySQL database password
+_define('DB_HOST', 'localhost'); // MySQL hostname
+_define('DB_CHARSET', 'utf8'); // Database Charset to use in creating database tables.
 
-define('SITE_URL', 'site url'); // Local Site URL optional
+_define('SITE_URL', 'site url'); // Local Site URL optional
 
-define('ENTRY_TABLE', 'uploads table'); // Main table
+_define('ENTRY_TABLE', 'uploads table'); // Main table
 ?>
 </pre>
 
