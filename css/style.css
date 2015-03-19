@@ -40,3 +40,12 @@
 #upl{
 	visibility: hidden;
 }
+
+table tr.build-success{
+	background-color: rgb(67, 172, 106);
+	color: #fff !important;
+}
+
+table tr.build-success *{
+	color: #fff !important;
+}

@@ -46,13 +46,13 @@
 								$thread_data = thread_data($key);
 								$request_data = request_data($thread_data['SRN'],'SRN');
 						?>
-							<tr>
+							<tr <?php if($thread_data['STATUS'] == 2) echo "class=\"build-success\"";?>>
 								<th><?php echo $i; $i++; ?></th>
 								<th><?php echo $thread_data['SL_NO']; ?></th>
 								<th><?php echo $thread_data['SRN']; ?></th>	
 								<th><?php echo date("d-M-Y",strtotime($thread_data['UPLOAD_TIME'])) ?></th>	
-								<th><?php if(strtotime($request_data['MOD_TIME'])) echo date("d-M-Y",strtotime($request_data['MOD_TIME'])); else echo "N.A";?></th>	
-								<th><?php if($thread_data['STATUS'] == 1) echo "<a href=\"".$request_data['FILE_NAME']."\" class=\"lable success\" >***</a>"; else echo "<span class=\"lable secondary\" >***</span>";?></th>
+								<th><?php if(strtotime($request_data['MOD_TIME'])>0) echo date("d-M-Y H:i",strtotime($request_data['MOD_TIME'])); else echo "N.A";?></th>	
+								<th><?php if($thread_data['STATUS'] == 2) echo "<a href=\"".$request_data['FILE_NAME']."\" class=\"lable success\" >Download</a>"; else echo "<span class=\"lable secondary\" >***</span>";?></th>
 							</tr>
 						<?php
 							}
