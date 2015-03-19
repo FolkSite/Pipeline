@@ -1,5 +1,5 @@
 <div class="row">
-	<div class="large-8 medium-10 small-12 columns text-center small-centered">
+	<div class="large-10 medium-12 small-12 columns text-center small-centered">
 		<h1>SRN Entry for</h1>
 		<p><?php echo $_POST['email']; ?></p>
 		<form action="" method="post" data-abide>
@@ -50,8 +50,8 @@
 								<th><?php echo $i; $i++; ?></th>
 								<th><?php echo $thread_data['SL_NO']; ?></th>
 								<th><?php echo $thread_data['SRN']; ?></th>	
-								<th><?php echo date("d-M-Y",strtotime($thread_data['UPLOAD_TIME'])) ?></th>	
-								<th><?php if(strtotime($request_data['MOD_TIME'])>0) echo date("d-M-Y H:i",strtotime($request_data['MOD_TIME'])); else echo "N.A";?></th>	
+								<th><?php echo date("d-M-Y H:i",strtotime($thread_data['UPLOAD_TIME'])) ?></th>	
+								<th><?php if(strtotime($request_data['MOD_TIME'])>0) echo date("d-M-Y  H:i",strtotime($request_data['MOD_TIME'])); else echo "N.A";?></th>	
 								<th><?php if($thread_data['STATUS'] == 2) echo "<a href=\"".$request_data['FILE_NAME']."\" class=\"lable success\" >Download</a>"; else echo "<span class=\"lable secondary\" >***</span>";?></th>
 							</tr>
 						<?php
